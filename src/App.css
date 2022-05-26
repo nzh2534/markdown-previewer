@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  min-height: 120vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  background-color: lightgray;
 }
 
-.App-link {
-  color: #61dafb;
+#editor, #preview {
+  background-color: lightcoral;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#editor{
+  width: 60vmin;
+  height: 30vh;
+  resize: vertical;
+}
+
+#preview{
+  width: 70vmin;
+  height: auto;
+  min-height: 30vh;
+  margin-top: 0px;
+  padding: 1vw;
+  position: relative;
+  font-size: 1.5vmax;
+}
+
+#preview code{
+  background-color: white;
+}
+
+#preview pre{
+  background-color: white;
+}
+
+#editorheader, #previewheader{
+  background-color: maroon;
+  padding: 5px;
+  padding-left: 1vw;
+  padding-right: 2vw;
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  height: 4vh;
+  border-radius: 2px;
+}
+
+.icon:hover{
+  color: yellow;
+  cursor: pointer;
+}
+
+.previewcontainer{
+  background-color: lightcoral;
+  margin: 1vmin;
+}
+
+.editorcontainer{
+  margin: 1vmin;
+  margin-top: 2vh;
 }
